@@ -1,7 +1,9 @@
 #include <iostream>
-    int
-    main()
-{
-    std::cout << "Hello World CUDA";
-    return 0;
+
+__global__ void helloWorld(){
+    printf("Hello World CUDA");
+}
+
+int main(){
+    helloWorld<<<1, 1>>>();
 }
